@@ -6,9 +6,9 @@ Relational database management systems (RDBMS) support a representation of "miss
 
 ### Aggregate functions and Null
 
-Count(*) vs Count(col_name)
+<u>Count(*) vs Count(col_name)</u>
 
-mysql> select * from tab;<br>
+mysql> select * from tab;<br\>
 
 | str  |
 |------|
@@ -16,160 +16,153 @@ mysql> select * from tab;<br>
 | NULL |
 | NULL |
 
-3 rows in set (0.00 sec)
+3 rows in set (0.00 sec)<br\>
 
-mysql> select count(*) from tab;
-+----------+
+mysql> select count(*) from tab;<br\>
+
 | count(*) |
-+----------+
+|----------|
 |        3 |
-+----------+
-1 row in set (0.01 sec)
 
-mysql> select count(str) from tab;
-+------------+
+1 row in set (0.01 sec)<br\>
+
+mysql> select count(str) from tab;<br\>
+
 | count(str) |
-+------------+
+|------------|
 |          0 |
-+------------+
-1 row in set (0.00 sec)
+
+1 row in set (0.00 sec)<br\>
 
 
-------------------------------------------------
-Null values stored in the database
+------------------------------------------------<br\>
+### Null values stored in the database<br\>
 
-mysql> insert into employee values (1,"Meena","D",12000,200,"Pune");
-Query OK, 1 row affected (0.01 sec)
+mysql> insert into employee values (1,"Meena","D",12000,200,"Pune");<br\>
+Query OK, 1 row affected (0.01 sec)<br\>
 
-mysql> insert into employee values (2,"Sid","I",24000,2000,"Mumbai");
-Query OK, 1 row affected (0.00 sec)
+mysql> insert into employee values (2,"Sid","I",24000,2000,"Mumbai");<br\>
+Query OK, 1 row affected (0.00 sec)<br\>
 
-mysql> insert into employee values (3,"Dip","R",14000,500,"Mumbai");
-Query OK, 1 row affected (0.01 sec)
+mysql> insert into employee values (3,"Dip","R",14000,500,"Mumbai");<br\>
+Query OK, 1 row affected (0.01 sec)<br\>
 
-mysql> insert into employee values (4,"Jan","R",19000,null,"Mumbai"); // give explicite value in column list
-Query OK, 1 row affected (0.00 sec)
+mysql> insert into employee values (4,"Jan","R",19000,null,"Mumbai"); // give explicite value in column list<br\>
+Query OK, 1 row affected (0.00 sec)<br\>
 
-mysql> insert into employee values (5,'John','O',40000,0,'Mumbai');
-Query OK, 1 row affected (0.01 sec)
+mysql> insert into employee values (5,'John','O',40000,0,'Mumbai');<br\>
+Query OK, 1 row affected (0.01 sec)<br\>
 
-mysql> insert into employee(id,fname,lname,salary,address) values (6,'Sarah','P',8000,'Mumbai'); // just omit it from the column list
-Query OK, 1 row affected (0.00 sec)
-
-
+mysql> insert into employee(id,fname,lname,salary,address) values (6,'Sarah','P',8000,'Mumbai'); // just omit it from the column list<br\>
+Query OK, 1 row affected (0.00 sec)<br\>
 
 
-Operations on Null
-mysql> select * from employee;
-+----+-------+-------+--------+------------+---------+
+
+
+###Operations on Null<br\>
+mysql> select * from employee;<br\>
+
 | id | fname | lname | salary | commission | address |
-+----+-------+-------+--------+------------+---------+
+|----|-------|-------|--------|------------|---------|
 |  1 | Meena | D     |  12000 |        200 | Pune    |
 |  2 | Sid   | I     |  24000 |       2000 | Mumbai  |
 |  3 | Dip   | R     |  14000 |        500 | Mumbai  |
 |  4 | Jan   | R     |  19000 |       NULL | Mumbai  |
 |  5 | John  | O     |  40000 |          0 | Mumbai  |
 |  6 | Sarah | P     |   8000 |       NULL | Mumbai  |
-+----+-------+-------+--------+------------+---------+
-6 rows in set (0.00 sec)
 
-mysql> select id, salary, commission from employee;
-+----+--------+------------+
+6 rows in set (0.00 sec)<br\>
+
+mysql> select id, salary, commission from employee;<br\>
+
 | id | salary | commission |
-+----+--------+------------+
+|----|--------|------------|
 |  1 |  12000 |        200 |
 |  2 |  24000 |       2000 |
 |  3 |  14000 |        500 |
 |  4 |  19000 |       NULL |
 |  5 |  40000 |          0 |
 |  6 |   8000 |       NULL |
-+----+--------+------------+
-6 rows in set (0.00 sec)
 
-mysql> select id, salary, commission, salary+commission eff_sal from employee;
-+----+--------+------------+---------+
+6 rows in set (0.00 sec)<br\>
+
+mysql> select id, salary, commission, salary+commission eff_sal from employee;<br\>
+
 | id | salary | commission | eff_sal |
-+----+--------+------------+---------+
+|----|--------|------------|---------|
 |  1 |  12000 |        200 |   12200 |
 |  2 |  24000 |       2000 |   26000 |
 |  3 |  14000 |        500 |   14500 |
 |  4 |  19000 |       NULL |    NULL |
 |  5 |  40000 |          0 |   40000 |
 |  6 |   8000 |       NULL |    NULL |
-+----+--------+------------+---------+
-6 rows in set (0.00 sec)
+
+6 rows in set (0.00 sec)<br\>
 
 
+### Null Values are not the same as 0. (IS NULL and IS NOT NULL)
 
+mysql> select fname, commission  from employee where commission is null;<br\>
 
-
-
-
-
-
--- Null Values are not the same as 0. (IS NULL and IS NOT NULL)
-
-mysql> select fname, commission  from employee where commission is null;
-+-------+------------+
 | fname | commission |
-+-------+------------+
+|-------|------------|
 | Jan   |       NULL |
 | Sarah |       NULL |
-+-------+------------+
-2 rows in set (0.00 sec)
 
-mysql> select fname, commission  from employee where commission is not null;
-+-------+------------+
+2 rows in set (0.00 sec)<br\>
+
+mysql> select fname, commission  from employee where commission is not null;<br\>
+
 | fname | commission |
-+-------+------------+
+|-------|------------|
 | Meena |        200 |
 | Sid   |       2000 |
 | Dip   |        500 |
 | John  |          0 |
-+-------+------------+
-4 rows in set (0.00 sec)
 
-mysql> select 1 is null, 1 is not null;
-+-----------+---------------+
+4 rows in set (0.00 sec)<br\>
+
+mysql> select 1 is null, 1 is not null;<br\>
+
 | 1 is null | 1 is not null |
-+-----------+---------------+
+|-----------|---------------|
 |         0 |             1 |
-+-----------+---------------+
-1 row in set (0.00 sec)
+
+1 row in set (0.00 sec)<br\>
 
 
 
-mysql> SELECT 1 = NULL, 1 <> NULL, 1 < NULL, 1 > NULL;
-+----------+-----------+----------+----------+
+mysql> SELECT 1 = NULL, 1 <> NULL, 1 < NULL, 1 > NULL;<br\>
+
 | 1 = NULL | 1 <> NULL | 1 < NULL | 1 > NULL |
-+----------+-----------+----------+----------+
+|----------|-----------|----------|----------|
 |     NULL |      NULL |     NULL |     NULL |
-+----------+-----------+----------+----------+
-1 row in set (0.00 sec)
 
-mysql> SELECT 1 = NULL, 1 != NULL, 1 < NULL, 1 > NULL;
-+----------+-----------+----------+----------+
+1 row in set (0.00 sec)<br\>
+
+mysql> SELECT 1 = NULL, 1 != NULL, 1 < NULL, 1 > NULL;<br\>
+
 | 1 = NULL | 1 != NULL | 1 < NULL | 1 > NULL |
-+----------+-----------+----------+----------+
+|----------|-----------|----------|----------|
 |     NULL |      NULL |     NULL |     NULL |
-+----------+-----------+----------+----------+
-1 row in set (0.00 sec)
 
-mysql> SELECT 1 = NULL, 1 != NULL, 1 < NULL, 1 > NULL;
-+----------+-----------+----------+----------+
+1 row in set (0.00 sec)<br\>
+
+mysql> SELECT 1 = NULL, 1 != NULL, 1 < NULL, 1 > NULL;<br\>
+
 | 1 = NULL | 1 != NULL | 1 < NULL | 1 > NULL |
-+----------+-----------+----------+----------+
+|----------|-----------|----------|----------|
 |     NULL |      NULL |     NULL |     NULL |
-+----------+-----------+----------+----------+
-1 row in set (0.00 sec)
 
-mysql> SELECT 0 IS NULL, 0 IS NOT NULL, '' IS NULL, '' IS NOT NULL;
-+-----------+---------------+------------+----------------+
+1 row in set (0.00 sec)<br\>
+
+mysql> SELECT 0 IS NULL, 0 IS NOT NULL, '' IS NULL, '' IS NOT NULL;<br\>
+
 | 0 IS NULL | 0 IS NOT NULL | '' IS NULL | '' IS NOT NULL |
-+-----------+---------------+------------+----------------+
+|-----------|---------------|------------|----------------|
 |         0 |             1 |          0 |              1 |
-+-----------+---------------+------------+----------------+
-1 row in set (0.00 sec)
+
+1 row in set (0.00 sec)<br\>
 
 
 Null Functions
