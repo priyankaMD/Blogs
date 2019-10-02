@@ -24,19 +24,18 @@ mysql> select count(*) from tab;
 |----------|
 |        3 |
 
-1 row in set (0.01 sec)<br\>
+1 row in set (0.01 sec)
 
-mysql> select count(str) from tab;<br\>
+mysql> select count(str) from tab;
 
 | count(str) |
 |------------|
 |          0 |
 
-1 row in set (0.00 sec)<br\>
+1 row in set (0.00 sec)
 
 
-------------------------------------------------<br\>
-### Null values stored in the database<br\>
+### Null values stored in the database
 
 mysql> insert into employee values (1,"Meena","D",12000,200,"Pune");<br\>
 Query OK, 1 row affected (0.01 sec)<br\>
