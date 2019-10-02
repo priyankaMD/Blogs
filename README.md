@@ -1,1 +1,1 @@
-1. [Null values handle in DB](https://PriyankaMD.github.io/Blogs)
+1. [Null values handle in DB](https://PriyankaMD.github.io/Blogs/Null)
