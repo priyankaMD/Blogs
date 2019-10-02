@@ -166,7 +166,8 @@ mysql> SELECT 0 IS NULL, 0 IS NOT NULL, '' IS NULL, '' IS NOT NULL;
 
 
 ### Null Functions
-### IFNULL(): It is a single row function that means it is executed on each row one by one.
+### IFNULL(): 
+It is a single row function that means it is executed on each row one by one.
 
 Syntax:
 IFNULL(expr1,expr2) : if expr1 is null then it returns expr2 else it returns expr1.
