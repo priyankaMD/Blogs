@@ -1,2 +1,1 @@
-# Blogs
-Blogs written for technical concepts.
+1. [Null values handle in DB](https://PriyankaMD.github.io/Blogs)
