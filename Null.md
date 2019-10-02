@@ -8,7 +8,7 @@ Relational database management systems (RDBMS) support a representation of "miss
 
 <u>Count(*) vs Count(col_name)</u>
 
-mysql> select * from tab;<br\>
+mysql> select * from tab;
 
 | str  |
 |------|
@@ -16,9 +16,9 @@ mysql> select * from tab;<br\>
 | NULL |
 | NULL |
 
-3 rows in set (0.00 sec)<br\>
+3 rows in set (0.00 sec)
 
-mysql> select count(*) from tab;<br\>
+mysql> select count(*) from tab;
 
 | count(*) |
 |----------|
