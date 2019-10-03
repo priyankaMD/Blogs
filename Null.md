@@ -35,31 +35,27 @@ mysql> select count(str) from tab;
 1 row in set (0.00 sec)
 
 
-### Null values stored in the database
+### How Null values stored in the database?
 
-mysql> insert into employee values (1,"Meena","D",12000,200,"Pune");
-Query OK, 1 row affected (0.01 sec)
+We can insert null values into database using following ways:
 
-mysql> insert into employee values (2,"Sid","I",24000,2000,"Mumbai");
-Query OK, 1 row affected (0.00 sec)
+1. Put explicite null in insert statement
 
-mysql> insert into employee values (3,"Dip","R",14000,500,"Mumbai");
-Query OK, 1 row affected (0.01 sec)
+For example, 
+insert into employee values (4,"Jan","R",19000,null,"Mumbai"); 
 
-mysql> insert into employee values (4,"Jan","R",19000,null,"Mumbai"); // give explicite value in column list
-Query OK, 1 row affected (0.00 sec)
+2. Omit it from the column list
 
-mysql> insert into employee values (5,'John','O',40000,0,'Mumbai');
-Query OK, 1 row affected (0.01 sec)
-
-mysql> insert into employee(id,fname,lname,salary,address) values (6,'Sarah','P',8000,'Mumbai'); // just omit it from the column list
-Query OK, 1 row affected (0.00 sec)
+For example, 
+insert into employee(id,fname,lname,salary,address) values (6,'Sarah','P',8000,'Mumbai'); 
 
 
 
 
 ### Operations on Null
 
+### Arithmatic Operations : 
+ 
 mysql> select * from employee;
 
 | id | fname | lname | salary | commission | address |
@@ -101,6 +97,7 @@ mysql> select id, salary, commission, salary+commission eff_sal from employee;
 
 
 ### Null values are not the same as 0. (IS NULL and IS NOT NULL)
+For example,
 
 mysql> select fname, commission  from employee where commission is null;
 
@@ -131,6 +128,7 @@ mysql> select 1 is null, 1 is not null;
 1 row in set (0.00 sec)
 
 
+### Relational Operation:
 
 mysql> SELECT 1 = NULL, 1 <> NULL, 1 < NULL, 1 > NULL;
 
@@ -372,12 +370,6 @@ mysql> desc demo1;
 mysql> insert into demo1 values(1);
 Query OK, 1 row affected (0.00 sec)
 
-mysql> insert into demo1 values(2);
-Query OK, 1 row affected (0.01 sec)
-
-mysql> insert into demo1 values(null);
-Query OK, 1 row affected (0.00 sec)
-
 mysql> insert into demo1 values(null);
 Query OK, 1 row affected (0.00 sec)
 
@@ -390,9 +382,8 @@ mysql> select * from demo1;
 |------|
 | NULL |
 | NULL |
-| NULL |
 |    1 |
-|    2 |
+
 
 5 rows in set (0.00 sec)
 
