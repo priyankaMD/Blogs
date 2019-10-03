@@ -58,7 +58,7 @@ Query OK, 1 row affected (0.00 sec)
 
 
 
-###Operations on Null
+### Operations on Null
 
 mysql> select * from employee;
 
@@ -100,7 +100,7 @@ mysql> select id, salary, commission, salary+commission eff_sal from employee;
 6 rows in set (0.00 sec)
 
 
-### Null Values are not the same as 0. (IS NULL and IS NOT NULL)
+### Null values are not the same as 0. (IS NULL and IS NOT NULL)
 
 mysql> select fname, commission  from employee where commission is null;
 
