@@ -34,6 +34,7 @@ TIME: A three-byte integer packed as HH×3600 + MM×60 + SS
 For example: 04:22:10 = 4x3600+22x60+10=15730 , it means 04:22:10 time is stored as 15730 integer format in database.
 
 TIMESTAMP: A four-byte integer representing seconds UTC since the epoch ('1970-01-01 00:00:00' UTC)
+
 DATETIME: Eight bytes: A four-byte integer for date packed as YYYY×10000 + MM×100 + DD and a four-byte integer for time packed as HH×10000 + MM×100 + SS
 
 
