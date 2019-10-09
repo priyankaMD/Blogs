@@ -36,26 +36,6 @@ For example: 04:22:10 = 4x3600+22x60+10=15730 , it means 04:22:10 time is stored
 TIMESTAMP: A four-byte integer representing seconds UTC since the epoch ('1970-01-01 00:00:00' UTC)
 DATETIME: Eight bytes: A four-byte integer for date packed as YYYY×10000 + MM×100 + DD and a four-byte integer for time packed as HH×10000 + MM×100 + SS
 
-TIME encoding for non-fractional part:
-
- 1 bit sign    (1= non-negative, 0= negative)
- 1 bit unused  (reserved for future extensions)
-10 bits hour   (0-838)
- 6 bits minute (0-59) 
- 6 bits second (0-59) 
----------------------
-24 bits = 3 bytes
-
-DATETIME encoding for non-fractional part:
-
- 1 bit  sign         (1= non-negative, 0= negative)
-17 bits year*13+month  (year 0-9999, month 0-12)
- 5 bits day            (0-31)
- 5 bits hour           (0-23)
- 6 bits minute         (0-59)
- 6 bits second         (0-59)
----------------------------
-40 bits = 5 bytes
 
 
 
