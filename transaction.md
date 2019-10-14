@@ -9,7 +9,7 @@
   1. Atomicity : (All or nothing rule) <br>
       Each transaction is considered as one unit and either runs to completion or is not executed at all. 
       It involves following two operations. <br>
-        —Abort: If a transaction aborts, changes made to database are not visible.
+        —Abort: If a transaction aborts, changes made to database are not visible. <br>
         —Commit: If a transaction commits, changes made are visible.
   
 
