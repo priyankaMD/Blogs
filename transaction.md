@@ -14,18 +14,14 @@
   
    For Example:Consider the transaction T consisting of T1 and T2: Transfer of 100 from account X to account Y. <br>
                     Transaction T   <br>
-            |                   |               |
-            | ----------------- | ------------- |
-            |   T1              |   T2          |
-            |  Read X           |   Read Y      |
-            |  X= X-100         |   Y=Y+100     |
-            |  Write X          |   Write Y     |
-            |  After: X = 400   |    Y = 300    |
             
             | Before : X = 500   | Y = 200 |
             | ------------- | ------------- |
             | T1 | T2 |
             | Read X  | Read Y |
+            | X= X-100 | Y=Y+100 |
+            | Write X | Write Y | 
+            |After: X = 400 | Y = 300 |
                   
         
    If the transaction fails after completion of T1 but before completion of T2.( say, after write(X) but before write(Y)),    then amount has been deducted from X but not added to Y. This results in an inconsistent database state. Therefore, the transaction must be executed in entirety in order to ensure correctness of database state. <br>
