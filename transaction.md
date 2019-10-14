@@ -1,7 +1,7 @@
 ### Transaction
   A transaction is a single logical unit of work which accesses and possibly modifies the contents of a database.
   
-  Transactions access data using: 
+  Transactions access data using: </br>
     1. Read Operation </br>
     2. Write Operation </br>
   In order to maintain consistency in a database, before and after transaction, certain properties are followed. 
@@ -11,6 +11,6 @@
       It involves following two operations.
         —Abort: If a transaction aborts, changes made to database are not visible.
         —Commit: If a transaction commits, changes made are visible.
-  2. 
+  
 
   
