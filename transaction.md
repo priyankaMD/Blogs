@@ -23,9 +23,9 @@
             |  After: X = 400   |    Y = 300    |
             
             | First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+            | ------------- | ------------- |
+            | Content Cell  | Content Cell  |
+            | Content Cell  | Content Cell  |
                   
         
    If the transaction fails after completion of T1 but before completion of T2.( say, after write(X) but before write(Y)),    then amount has been deducted from X but not added to Y. This results in an inconsistent database state. Therefore, the transaction must be executed in entirety in order to ensure correctness of database state. <br>
