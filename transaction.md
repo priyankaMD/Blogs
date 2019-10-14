@@ -3,7 +3,7 @@
   
   Transactions access data using: </br>
     1. Read Operation </br>
-    2. Write Operation </br>
+    2. Write Operation </br></br>
   In order to maintain consistency in a database, before and after transaction, certain properties are followed. 
   These are called ACID properties. <br/>
   1. Atomicity : (All or nothing rule)
