@@ -53,22 +53,22 @@
  ### How to see the 'autocommit' variable in mysql: 
 
 mysql> show global variables like 'autocommit';
-+---------------+-------+
+|---------------|-------|
 | Variable_name | Value |
-+---------------+-------+
+|---------------|-------|
 | autocommit    | ON    |
-+---------------+-------+
+|---------------|-------|
 1 row in set (0.03 sec)
 
 or
 
 The @@ prefix denotes a server variable. The 1 means that autocommit is currently enabled.
 mysql> select @@autocommit;
-+--------------+
+|--------------|
 | @@autocommit |
-+--------------+
+|--------------|
 |            1 |
-+--------------+
+|--------------|
 1 row in set (0.01 sec)
 
 ### Rollback 
