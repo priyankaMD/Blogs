@@ -128,6 +128,7 @@ Query OK, 1 row affected (0.01 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
 mysql> select * from employee;<br>
+
 | id | fname | lname | salary | commission | address |
 |----|-------|-------|--------|------------|---------|
 |  1 | Meena | D     |  12000 |        200 | Pune    |
@@ -139,12 +140,14 @@ mysql> select * from employee;<br>
 |  7 | SDC   | G     |  12000 |         70 | null    |
 |  8 | hshg  | hsgh  |   1298 |        100 | NULL    |
 |  9 | Nina  | Pawar |   1200 |        100 | Pune    |
+
 9 rows in set (0.00 sec)
 
 mysql> rollback;
 Query OK, 0 rows affected (0.01 sec)
 
 mysql> select * from employee;<br>
+
 | id | fname | lname | salary | commission | address |
 |----|-------|-------|--------|------------|---------|
 |  1 | Meena | D     |  12000 |        200 | Pune    |
@@ -156,6 +159,7 @@ mysql> select * from employee;<br>
 |  7 | SDC   | G     |  12000 |         70 | null    |
 |  8 | hshg  | hsgh  |   1298 |        100 | NULL    |
 |  9 | Nina  | P     |   1200 |        100 | Pune    |
+
 9 rows in set (0.00 sec)
 
 
@@ -176,9 +180,9 @@ mysql> insert into employee values(11,'geetu','p',1211,20,'mumbai');
 Query OK, 1 row affected (0.00 sec)
 
 mysql> select * from employee;
-+----+-------+-------+--------+------------+---------+
+
 | id | fname | lname | salary | commission | address |
-+----+-------+-------+--------+------------+---------+
+|----|-------|-------|--------|------------|---------|
 |  1 | Meena | D     |  12000 |        200 | Pune    |
 |  2 | Sid   | I     |  24000 |       2000 | Mumbai  |
 |  3 | Dip   | R     |  14000 |        500 | Mumbai  |
@@ -190,16 +194,16 @@ mysql> select * from employee;
 |  9 | Nina  | P     |   1200 |        100 | Pune    |
 | 10 | gita  | T     |   1201 |         10 | mumbai  |
 | 11 | geetu | p     |   1211 |         20 | mumbai  |
-+----+-------+-------+--------+------------+---------+
+
 11 rows in set (0.01 sec)
 
 mysql> rollback;
 Query OK, 0 rows affected (0.00 sec)
 
 mysql> select * from employee;
-+----+-------+-------+--------+------------+---------+
+
 | id | fname | lname | salary | commission | address |
-+----+-------+-------+--------+------------+---------+
+|----|-------|-------|--------|------------|---------|
 |  1 | Meena | D     |  12000 |        200 | Pune    |
 |  2 | Sid   | I     |  24000 |       2000 | Mumbai  |
 |  3 | Dip   | R     |  14000 |        500 | Mumbai  |
@@ -210,7 +214,10 @@ mysql> select * from employee;
 |  8 | hshg  | hsgh  |   1298 |        100 | NULL    |
 |  9 | Nina  | P     |   1200 |        100 | Pune    |
 | 10 | gita  | T     |   1201 |         10 | mumbai  |
-+----+-------+-------+--------+------------+---------+
+| 11 | geetu | p     |   1211 |         20 | mumbai  |
+| 10 | gita  | T     |   1201 |         10 | mumbai  |
+
+
 10 rows in set (0.00 sec)
 
  
