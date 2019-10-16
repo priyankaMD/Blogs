@@ -53,11 +53,11 @@
  ### How to see the 'autocommit' variable in mysql: 
 
 mysql> show global variables like 'autocommit'; <br>
-|---------------|-------|
+
 | Variable_name | Value |
 |---------------|-------|
 | autocommit    | ON    |
-|---------------|-------| 
+
 <br>
 1 row in set (0.03 sec)
 
