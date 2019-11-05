@@ -37,6 +37,7 @@ The previously-mentioned three tasks (syntax check, semantics check and the gene
 If the given hash value and the statement text exactly match a similar statement in the library cache, the statement is termed to be executed already. This statement can now be executed as a Soft Parsed statement. But if it isn’t, the query must be Hard Parsed.
 
 
+
   
 
 
