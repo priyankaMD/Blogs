@@ -2,4 +2,4 @@
 2. [Date storage in DB](https://PriyankaMD.github.io/Blogs/dates)
 3. [Transaction Properties in DB](https://PriyankaMD.github.io/Blogs/transaction)
 4. [Query Parsing in DB](https://PriyankaMD.github.io/Blogs/parsing)
-5. [Query Parsing in DB](https://PriyankaMD.github.io/Blogs/DBkeys)
+5. [Keys in DB](https://PriyankaMD.github.io/Blogs/DBkeys)
