@@ -11,7 +11,7 @@ Joins used to combine data or rows from two or more tables based on a common fie
 
 1. Inner Join : Returns records that have matching values in both tables.It is also referred to as an EQUIJOIN.
   
-  Syntax:
+  Syntax:<br />
   SELECT table1.column1, table2.column2...<br />
   FROM table1<br />
   INNER JOIN table2<br />
@@ -55,7 +55,7 @@ Result is, <br />
 
 2. Left outer join : Returns all records from the left table, and the matched records from the right table.
 
-  Syntax:
+  Syntax:<br />
   SELECT table1.column1, table2.column2...<br />
   FROM table1<br />
   LEFT JOIN table2<br />
@@ -86,7 +86,7 @@ Result is, <br />
 
 3. Right outer join : Returns all records from the right table, and the matched records from the left table.
 
-  Syntax: 
+  Syntax: <br />
   SELECT table1.column1, table2.column2...<br />
   FROM table1<br />
   RIGHT JOIN table2<br />
@@ -99,7 +99,7 @@ Result is, <br />
    RIGHT JOIN ORDERS<br />
    ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;<br />
    
-Result is, 
+Result is, <br />
 
 | ID   | NAME     | AMOUNT | DATE                |
 |------|----------|--------|---------------------|
@@ -112,7 +112,7 @@ Result is,
 
 4. Full outer join : Returns all records when there is a match in either left or right table.
   
-  Syntax: 
+  Syntax: <br />
   SELECT table1.column1, table2.column2...<br />
   FROM table1<br />
   FULL JOIN table2<br />
@@ -145,7 +145,7 @@ Result is,
 
 5. Cross join : The SQL CROSS JOIN produces a result set which is the number of rows in the first table multiplied by            the number of rows in the second table if no WHERE clause is used along with CROSS JOIN.This kind of result is called          as Cartesian Product.
 
-  Syntax: 
+  Syntax: <br />
   SELECT table1.column1, table2.column2...<br />
   FROM  table1, table2 [, table3 ]<br />
   
@@ -190,7 +190,7 @@ Result is,
 
 6. Self Join : used to join a table to itself as if the table were two tables
 
-  Syntax:
+  Syntax:<br />
   SELECT a.column_name, b.column_name...<br />
   FROM table1 a, table1 b<br />
   WHERE a.common_field = b.common_field;<br />
