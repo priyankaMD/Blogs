@@ -94,10 +94,10 @@ Result is,
   
   For example: Consider same Customer Table and an Order Tabel and same query i.e find the customer with their                  order details..
  We can write the right join query for above query,
-   SELECT  ID, NAME, AMOUNT, DATE
-   FROM CUSTOMERS
-   RIGHT JOIN ORDERS
-   ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+   SELECT  ID, NAME, AMOUNT, DATE<br />
+   FROM CUSTOMERS<br />
+   RIGHT JOIN ORDERS<br />
+   ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;<br />
    
 Result is, 
 
@@ -113,18 +113,18 @@ Result is,
 4. Full outer join : Returns all records when there is a match in either left or right table.
   
   Syntax: 
-  SELECT table1.column1, table2.column2...
-  FROM table1
-  FULL JOIN table2
-  ON table1.common_field = table2.common_field;
+  SELECT table1.column1, table2.column2...<br />
+  FROM table1<br />
+  FULL JOIN table2<br />
+  ON table1.common_field = table2.common_field;<br />
   
   For example: Consider same Customer Table and an Order Tabel and same query i.e find the customer with their                  order details..
  We can write the full join query for above query,
   
-   SELECT  ID, NAME, AMOUNT, DATE
-   FROM CUSTOMERS
-   FULL JOIN ORDERS
-   ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+   SELECT  ID, NAME, AMOUNT, DATE<br />
+   FROM CUSTOMERS<br />
+   FULL JOIN ORDERS<br />
+   ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;<br />
 
 | ID   | NAME     | AMOUNT | DATE                |
 |------|----------|--------|---------------------|
@@ -146,14 +146,14 @@ Result is,
 5. Cross join : The SQL CROSS JOIN produces a result set which is the number of rows in the first table multiplied by            the number of rows in the second table if no WHERE clause is used along with CROSS JOIN.This kind of result is called          as Cartesian Product.
 
   Syntax: 
-  SELECT table1.column1, table2.column2...
-  FROM  table1, table2 [, table3 ]
+  SELECT table1.column1, table2.column2...<br />
+  FROM  table1, table2 [, table3 ]<br />
   
   For example: Consider same Customer Table and an Order Tabel and same query i.e find the customer with their                  order details..
  We can write the cross join query for above query,
  
-   SELECT  ID, NAME, AMOUNT, DATE
-   FROM CUSTOMERS, ORDERS;
+   SELECT  ID, NAME, AMOUNT, DATE<br />
+   FROM CUSTOMERS, ORDERS;<br />
    
  Result is,
  
@@ -191,9 +191,9 @@ Result is,
 6. Self Join : used to join a table to itself as if the table were two tables
 
   Syntax:
-  SELECT a.column_name, b.column_name...
-  FROM table1 a, table1 b
-  WHERE a.common_field = b.common_field;
+  SELECT a.column_name, b.column_name...<br />
+  FROM table1 a, table1 b<br />
+  WHERE a.common_field = b.common_field;<br />
   
   
   
