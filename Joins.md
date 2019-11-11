@@ -9,7 +9,8 @@ Joins used to combine data or rows from two or more tables based on a common fie
 4. Full outer join
 5. Cross join
 
-1. Inner Join : Returns records that have matching values in both tables.It is also referred to as an EQUIJOIN.
+## 1. Inner Join : 
+  Returns records that have matching values in both tables.It is also referred to as an EQUIJOIN.
   
   Syntax:<br />
   SELECT table1.column1, table2.column2...<br />
@@ -53,7 +54,8 @@ Result is, <br />
 |  4 | Chaitali |   2060 | 2008-05-20 00:00:00 |
 
 
-2. Left outer join : Returns all records from the left table, and the matched records from the right table.
+## 2. Left outer join : 
+   Returns all records from the left table, and the matched records from the right table.
 
   Syntax:<br />
   SELECT table1.column1, table2.column2...<br />
@@ -84,7 +86,8 @@ Result is, <br />
 
 
 
-3. Right outer join : Returns all records from the right table, and the matched records from the left table.
+## 3. Right outer join : 
+  Returns all records from the right table, and the matched records from the left table.
 
   Syntax: <br />
   SELECT table1.column1, table2.column2...<br />
@@ -110,7 +113,8 @@ Result is, <br />
 
   
 
-4. Full outer join : Returns all records when there is a match in either left or right table.
+## 4. Full outer join : 
+    Returns all records when there is a match in either left or right table.
   
   Syntax: <br />
   SELECT table1.column1, table2.column2...<br />
@@ -143,7 +147,8 @@ Result is, <br />
 
 
 
-5. Cross join : The SQL CROSS JOIN produces a result set which is the number of rows in the first table multiplied by            the number of rows in the second table if no WHERE clause is used along with CROSS JOIN.This kind of result is called          as Cartesian Product.
+## 5. Cross join : 
+  The SQL CROSS JOIN produces a result set which is the number of rows in the first table multiplied by the number of rows in the second table if no WHERE clause is used along with CROSS JOIN.This kind of result is called as Cartesian Product.
 
   Syntax: <br />
   SELECT table1.column1, table2.column2...<br />
@@ -188,7 +193,8 @@ Result is, <br />
 |  7 | Muffy    |   1560 | 2009-11-20 00:00:00 |
 |  7 | Muffy    |   2060 | 2008-05-20 00:00:00 |
 
-6. Self Join : used to join a table to itself as if the table were two tables
+## 6. Self Join : 
+used to join a table to itself as if the table were two tables
 
   Syntax:<br />
   SELECT a.column_name, b.column_name...<br />
