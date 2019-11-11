@@ -3,3 +3,4 @@
 3. [Transaction Properties in DB](https://PriyankaMD.github.io/Blogs/transaction)
 4. [Query Parsing in DB](https://PriyankaMD.github.io/Blogs/parsing)
 5. [Keys in DB](https://PriyankaMD.github.io/Blogs/DBkeys)
+6. [Joins in DB](https://PriyankaMD.github.io/Blogs/Joins)
