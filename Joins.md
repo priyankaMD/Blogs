@@ -43,7 +43,7 @@ We can write the inner join query for above query,
    INNER JOIN ORDERS<br />
    ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;<br />
    
-Result is, 
+Result is, <br />
 
 | ID | NAME     | AMOUNT | DATE                |
 |----|----------|--------|---------------------|
@@ -62,14 +62,14 @@ Result is,
   ON table1.common_field = table2.common_field;<br />
   
   For example: Consider same Customer Table and an Order Tabel and same query i.e find the customer with their order details..
-  We can write the left join query for above query,
+  We can write the left join query for above query,<br />
    
    SELECT  ID, NAME, AMOUNT, DATE<br />
    FROM CUSTOMERS<br />
    LEFT JOIN ORDERS<br />
    ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;<br />
    
-  Result is,
+  Result is,<br />
 
 | ID | NAME     | AMOUNT | DATE                |
 |----|----------|--------|---------------------|
@@ -92,8 +92,8 @@ Result is,
   RIGHT JOIN table2<br />
   ON table1.common_field = table2.common_field;<br />
   
-  For example: Consider same Customer Table and an Order Tabel and same query i.e find the customer with their                  order details..
- We can write the right join query for above query,
+  For example: Consider same Customer Table and an Order Tabel and same query i.e find the customer with their                  order details..<br />
+ We can write the right join query for above query,<br /><br />
    SELECT  ID, NAME, AMOUNT, DATE<br />
    FROM CUSTOMERS<br />
    RIGHT JOIN ORDERS<br />
@@ -119,7 +119,7 @@ Result is,
   ON table1.common_field = table2.common_field;<br />
   
   For example: Consider same Customer Table and an Order Tabel and same query i.e find the customer with their                  order details..
- We can write the full join query for above query,
+ We can write the full join query for above query,<br />
   
    SELECT  ID, NAME, AMOUNT, DATE<br />
    FROM CUSTOMERS<br />
@@ -150,7 +150,7 @@ Result is,
   FROM  table1, table2 [, table3 ]<br />
   
   For example: Consider same Customer Table and an Order Tabel and same query i.e find the customer with their                  order details..
- We can write the cross join query for above query,
+ We can write the cross join query for above query,<br />
  
    SELECT  ID, NAME, AMOUNT, DATE<br />
    FROM CUSTOMERS, ORDERS;<br />
