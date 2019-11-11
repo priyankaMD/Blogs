@@ -194,7 +194,7 @@ Result is, <br />
 |  7 | Muffy    |   2060 | 2008-05-20 00:00:00 |
 
 ## 6. Self Join : 
-used to join a table to itself as if the table were two tables
+Used to join a table to itself as if the table were two tables
 
   Syntax:<br />
   SELECT a.column_name, b.column_name...<br />
